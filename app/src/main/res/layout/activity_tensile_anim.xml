@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.liliu.app.mytestapp.TensileAnimActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_bgGround"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_white_round"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tensile_tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="hello"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_tensile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:text="点我拉伸" />
+</LinearLayout>
