@@ -1,10 +1,7 @@
 package com.liliu.app.mytestapp;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.jakewharton.rxbinding2.view.RxView;
 
