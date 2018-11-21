@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.liliu.app.mytestapp.activity.TriangleLabelActivity">
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="标签1" />
+
+    <com.liliu.app.mytestapp.views.CornerLabelView
+        android:id="@+id/cornerLabelView"
+
+        style="@style/CornerLabelView.Default"
+        app:clvFillColor="#9C27B0"
+        app:clvFlags="triangle"
+        app:clvPaddingCenter="10dp"
+        app:clvText1="五四三二"
+        app:clvText2="1234"
+        app:clvText2Color="#66ffffff" />
+
+    <com.liliu.app.mytestapp.views.CornerLabelView
+        style="@style/CornerLabelView.Default"
+        android:layout_gravity="right"
+        app:clvFillColor="#F44336"
+        app:clvFlags="triangle|right"
+        app:clvPaddingCenter="10dp"
+        app:clvText1="12345678"
+        app:clvText2="1234"
+        android:layout_alignParentEnd="true"
+        app:clvText2Color="#66ffffff"
+        />
+
+    <com.liliu.app.mytestapp.views.CornerLabelView
+        style="@style/CornerLabelView.Default"
+        android:layout_gravity="bottom"
+        app:clvFillColor="#3F51B5"
+        app:clvFlags="triangle|bottom"
+        app:clvPaddingCenter="10dp"
+        app:clvText1="五四三二"
+        app:clvText2="1234"
+        app:clvText2Color="#66ffffff"/>
+
+    <com.liliu.app.mytestapp.views.CornerLabelView
+        style="@style/CornerLabelView.Default"
+        android:layout_gravity="bottom|right"
+        app:clvFillColor="#009688"
+        app:clvFlags="triangle|right|bottom"
+        app:clvPaddingCenter="10dp"
+        app:clvText1="五四三二"
+        app:clvText2="1234"
+        app:clvText2Color="#66ffffff"/>
+
+    <com.liliu.app.mytestapp.views.CornerLabelView
+        style="@style/CornerLabelView.Default"
+        android:layout_gravity="right"
+        app:clvFillColor="#4CAF50"
+        app:clvFlags="right"
+        app:clvText1="Android"/>
+</RelativeLayout>

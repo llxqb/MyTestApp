@@ -17,7 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".TensileAnimActivity" />
-        <activity android:name=".BtnChangePageActivity"></activity>
+        <activity android:name=".BtnChangePageActivity" />
+        <activity android:name=".activity.TriangleLabelActivity" />
+        <activity
+            android:name=".activity.DialogActivity"
+            android:theme="@style/dialogActivity">
+
+        </activity>
     </application>
 
 </manifest>

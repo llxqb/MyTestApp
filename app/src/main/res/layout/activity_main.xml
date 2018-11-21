@@ -18,6 +18,18 @@
         android:layout_height="wrap_content"
         android:text="@string/main_btn2_text" />
 
+    <Button
+        android:id="@+id/main_btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn3_text" />
+
+    <Button
+        android:id="@+id/main_btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn4_text" />
+
 
 
 </LinearLayout>

@@ -3,4 +3,6 @@
     <!--MainActivity -->
     <string name="main_btn1_text">测试点赞动画效果</string>
     <string name="main_btn2_text">测试按钮控制翻页</string>
+    <string name="main_btn3_text">测试三角形标签</string>
+    <string name="main_btn4_text">测试dialogActivity</string>
 </resources>
