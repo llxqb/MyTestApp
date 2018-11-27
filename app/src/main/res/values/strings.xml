@@ -5,4 +5,6 @@
     <string name="main_btn2_text">测试按钮控制翻页</string>
     <string name="main_btn3_text">测试三角形标签</string>
     <string name="main_btn4_text">测试dialogActivity</string>
+    <string name="main_btn5_text">仿IOS底部弹出框</string>
+    <string name="main_btn6_text">TabLayout与RecyclerView联动</string>
 </resources>

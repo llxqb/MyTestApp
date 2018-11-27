@@ -21,9 +21,9 @@
         <activity android:name=".activity.TriangleLabelActivity" />
         <activity
             android:name=".activity.DialogActivity"
-            android:theme="@style/dialogActivity">
-
-        </activity>
+            android:theme="@style/dialogActivity" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.IOSDialogActivity" />
     </application>
 
 </manifest>
