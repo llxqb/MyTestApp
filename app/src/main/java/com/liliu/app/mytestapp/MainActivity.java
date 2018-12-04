@@ -6,6 +6,7 @@ import android.widget.Button;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.liliu.app.mytestapp.activity.DialogActivity;
 import com.liliu.app.mytestapp.activity.IOSDialogActivity;
+import com.liliu.app.mytestapp.activity.SlideMenuActivity;
 import com.liliu.app.mytestapp.activity.TriangleLabelActivity;
 
 import java.util.concurrent.TimeUnit;
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity {
         RxView.clicks(mainBtn3).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn3());
         RxView.clicks(mainBtn4).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn4());
         RxView.clicks(mainBtn5).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn5());
+        RxView.clicks(mainBtn6).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn6());
     }
 
     protected void initData() {
@@ -58,6 +60,9 @@ public class MainActivity extends BaseActivity {
 
     private void startBtn5() {
         start(this, IOSDialogActivity.class);
+    }
+    private void startBtn6() {
+        start(this, SlideMenuActivity.class);
     }
 
 }

@@ -24,6 +24,7 @@
             android:theme="@style/dialogActivity" />
         <activity android:name=".activity.TestActivity" />
         <activity android:name=".activity.IOSDialogActivity" />
+        <activity android:name=".activity.SlideMenuActivity"></activity>
     </application>
 
 </manifest>
