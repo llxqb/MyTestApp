@@ -40,8 +40,18 @@
         android:id="@+id/main_btn_6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_btn6_text"
-        />
+        android:text="@string/main_btn6_text" />
 
+    <Button
+        android:id="@+id/main_btn_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn7_text" />
+
+    <Button
+        android:id="@+id/main_btn_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn8_text" />
 
 </LinearLayout>

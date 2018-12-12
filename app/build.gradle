@@ -33,4 +33,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.contrarywind:Android-PickerView:4.1.6'
+    compile 'com.gavin.com.library:stickyDecoration:1.4.11'
+    compile 'com.github.mcxtzhang:NestFullListView:V1.0.0'
+    compile 'com.google.code.gson:gson:2.8.2' //gson
 }
