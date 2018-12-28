@@ -5,45 +5,63 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.liliu.app.mytestapp.BaseActivity;
 import com.liliu.app.mytestapp.R;
+import com.liliu.app.mytestapp.adapter.MyAdapter;
+import com.liliu.app.mytestapp.entity.City;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Android 侧滑栏实现
  */
-public class SlideMenuActivity extends BaseActivity implements View.OnClickListener{
+public class SlideMenuActivity extends BaseActivity implements View.OnClickListener {
     private DrawerLayout drawerLayout;
-//    private SystemBarTintManager tintManager;
+    //    private SystemBarTintManager tintManager;
     private NavigationView navigationView;
-    ImageView menu;
+    Button menu;
+    XRecyclerView mRecyclerView;
+    MyAdapter mMyAdapter = null;
+    List<City> cityList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_slide_menu);
-        initView();
         initData();
+        initView();
     }
 
     private void initView() {
-        drawerLayout =  findViewById(R.id.activity_na);
-        navigationView =  findViewById(R.id.nav);
-        menu= findViewById(R.id.main_menu);
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mMyAdapter = new MyAdapter(cityList);
+        mRecyclerView.setAdapter(mMyAdapter);
+        mRecyclerView.setLoadingMoreEnabled(false);
+
+        drawerLayout = findViewById(R.id.activity_na);
+        navigationView = findViewById(R.id.nav);
+        menu = findViewById(R.id.top_btn);
         View headerView = navigationView.getHeaderView(0);//获取头布局
         menu.setOnClickListener(this);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 //item.setChecked(true);
-                Toast.makeText(SlideMenuActivity.this,item.getTitle().toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(SlideMenuActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                 drawerLayout.closeDrawer(navigationView);
                 return true;
             }
@@ -52,16 +70,21 @@ public class SlideMenuActivity extends BaseActivity implements View.OnClickListe
 
 
     private void initData() {
+        for (int i = 0; i < 20; i++) {
+            City city = new City();
+            city.name = "item" + i;
+            cityList.add(city);
+        }
     }
 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.main_menu://点击菜单，跳出侧滑菜单
-                if (drawerLayout.isDrawerOpen(navigationView)){
+        switch (v.getId()) {
+            case R.id.top_btn://点击菜单，跳出侧滑菜单
+                if (drawerLayout.isDrawerOpen(navigationView)) {
                     drawerLayout.closeDrawer(navigationView);
-                }else{
+                } else {
                     drawerLayout.openDrawer(navigationView);
                 }
                 break;

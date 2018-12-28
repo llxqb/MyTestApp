@@ -6,6 +6,7 @@ import android.widget.Button;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.liliu.app.mytestapp.activity.DialogActivity;
 import com.liliu.app.mytestapp.activity.IOSDialogActivity;
+import com.liliu.app.mytestapp.activity.LoadMoreActivity;
 import com.liliu.app.mytestapp.activity.MultItemActivity;
 import com.liliu.app.mytestapp.activity.SlideMenuActivity;
 import com.liliu.app.mytestapp.activity.SortActivity;
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity {
         Button mainBtn6 = findViewById(R.id.main_btn_6);
         Button mainBtn7 = findViewById(R.id.main_btn_7);
         Button mainBtn8 = findViewById(R.id.main_btn_8);
+        Button mainBtn9 = findViewById(R.id.main_btn_9);
         RxView.clicks(mainBtn1).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn1());
         RxView.clicks(mainBtn2).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn2());
         RxView.clicks(mainBtn3).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn3());
@@ -42,6 +44,7 @@ public class MainActivity extends BaseActivity {
         RxView.clicks(mainBtn6).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn6());
         RxView.clicks(mainBtn7).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn7());
         RxView.clicks(mainBtn8).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn8());
+        RxView.clicks(mainBtn9).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn9());
     }
 
     protected void initData() {
@@ -76,6 +79,9 @@ public class MainActivity extends BaseActivity {
     }
     private void startBtn8() {
         start(this, SortActivity.class);
+    }
+    private void startBtn9() {
+        start(this, LoadMoreActivity.class);
     }
 
 }

@@ -9,4 +9,5 @@
     <string name="main_btn6_text">侧滑菜单的实现（NavigationView）</string>
     <string name="main_btn7_text">RecyclerView嵌套RecyclerView</string>
     <string name="main_btn8_text">对象排序</string>
+    <string name="main_btn9_text">RecyclerView上拉加载更多</string>
 </resources>

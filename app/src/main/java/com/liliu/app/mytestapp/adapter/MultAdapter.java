@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.liliu.app.mytestapp.R;
+import com.liliu.app.mytestapp.entity.City;
 import com.liliu.app.mytestapp.entity.Order;
 
 import java.util.ArrayList;
@@ -22,9 +23,9 @@ import java.util.List;
 
 public class MultAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Context mContext;
-    private List<Order> mOrderList = new ArrayList<>();
+    private List<City> mOrderList = new ArrayList<>();
 
-    public MultAdapter(List<Order> orderList, Context context) {
+    public MultAdapter(List<City> orderList, Context context) {
         this.mContext = context;
         mOrderList = orderList;
 
@@ -42,7 +43,8 @@ public class MultAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Order order = mOrderList.get(position);
+        City order = mOrderList.get(position);
+        ((BottomHolder) holder).date.setText(order.name);
 
 //        ((BottomHolder) holder).date.setText(order.da);
 //        ((BottomHolder) holder).num.setText(order.num + "单");
