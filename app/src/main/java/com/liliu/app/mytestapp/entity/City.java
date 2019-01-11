@@ -5,12 +5,20 @@ package com.liliu.app.mytestapp.entity;
  */
 
 public class City {
-    /**
-     * 城市名
-     */
-    public String name;
+
     /**
      * 所属省份
      */
     public String province;
+    public String provinceNum;
+
+    /**
+     * 城市名
+     */
+    public String city;
+    public String cityNum;
+
+    public boolean isShow;
+
+
 }

@@ -10,6 +10,7 @@ import com.liliu.app.mytestapp.activity.LoadMoreActivity;
 import com.liliu.app.mytestapp.activity.MultItemActivity;
 import com.liliu.app.mytestapp.activity.SlideMenuActivity;
 import com.liliu.app.mytestapp.activity.SortActivity;
+import com.liliu.app.mytestapp.activity.TopActivity;
 import com.liliu.app.mytestapp.activity.TriangleLabelActivity;
 
 import java.util.concurrent.TimeUnit;
@@ -36,6 +37,7 @@ public class MainActivity extends BaseActivity {
         Button mainBtn7 = findViewById(R.id.main_btn_7);
         Button mainBtn8 = findViewById(R.id.main_btn_8);
         Button mainBtn9 = findViewById(R.id.main_btn_9);
+        Button mainBtn10 = findViewById(R.id.main_btn_10);
         RxView.clicks(mainBtn1).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn1());
         RxView.clicks(mainBtn2).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn2());
         RxView.clicks(mainBtn3).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn3());
@@ -45,6 +47,7 @@ public class MainActivity extends BaseActivity {
         RxView.clicks(mainBtn7).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn7());
         RxView.clicks(mainBtn8).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn8());
         RxView.clicks(mainBtn9).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn9());
+        RxView.clicks(mainBtn10).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn10());
     }
 
     protected void initData() {
@@ -82,6 +85,9 @@ public class MainActivity extends BaseActivity {
     }
     private void startBtn9() {
         start(this, LoadMoreActivity.class);
+    }
+    private void startBtn10() {
+        start(this, TopActivity.class);
     }
 
 }

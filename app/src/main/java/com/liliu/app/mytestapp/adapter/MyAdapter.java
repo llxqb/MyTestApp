@@ -38,7 +38,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder> {
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         City city = mCities.get(position);
         MyHolder myHolder = holder;
-        myHolder.mTextView.setText(city.name);
+        myHolder.mProvince.setText(city.province);
+        myHolder.mProvinceNum.setText(city.provinceNum);
+        myHolder.mCity.setText(city.city);
+        myHolder.mCityNum.setText(city.cityNum);
     }
 
 
@@ -49,11 +52,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder> {
 
 
     class MyHolder extends ViewHolder {
-        TextView mTextView;
+        TextView mCity;
+        TextView mCityNum;
+        TextView mProvince;
+        TextView mProvinceNum;
 
         MyHolder(View itemView) {
             super(itemView);
-            mTextView = itemView.findViewById(R.id.my_item_text);
+            mCity = itemView.findViewById(R.id.city);
+            mCityNum = itemView.findViewById(R.id.city_num);
+            mProvince = itemView.findViewById(R.id.province);
+            mProvinceNum = itemView.findViewById(R.id.province_num);
         }
     }
 }

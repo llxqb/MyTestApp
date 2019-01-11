@@ -72,7 +72,7 @@ public class SlideMenuActivity extends BaseActivity implements View.OnClickListe
     private void initData() {
         for (int i = 0; i < 20; i++) {
             City city = new City();
-            city.name = "item" + i;
+            city.city = "item" + i;
             cityList.add(city);
         }
     }
