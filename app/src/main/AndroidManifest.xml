@@ -28,7 +28,8 @@
         <activity android:name=".activity.MultItemActivity" />
         <activity android:name=".activity.SortActivity" />
         <activity android:name=".activity.LoadMoreActivity" />
-        <activity android:name=".activity.TopActivity"></activity>
+        <activity android:name=".activity.TopActivity" />
+        <activity android:name=".activity.MyViewActivity"></activity>
     </application>
 
 </manifest>

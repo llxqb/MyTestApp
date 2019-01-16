@@ -11,4 +11,5 @@
     <string name="main_btn8_text">对象排序</string>
     <string name="main_btn9_text">RecyclerView上拉加载更多</string>
     <string name="main_btn10_text">RecyclerView悬浮</string>
+    <string name="main_btn11_text">自定义View</string>
 </resources>
