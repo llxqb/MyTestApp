@@ -1,4 +1,4 @@
-package com.liliu.app.mytestapp;
+package com.liliu.app.mytestapp.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.jakewharton.rxbinding2.view.RxView;
+import com.liliu.app.mytestapp.R;
 import com.liliu.app.mytestapp.adapter.BtnChangePageAdapter;
 
 import java.util.ArrayList;

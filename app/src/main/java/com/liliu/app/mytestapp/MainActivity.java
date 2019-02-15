@@ -4,13 +4,17 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.jakewharton.rxbinding2.view.RxView;
+import com.liliu.app.mytestapp.activity.BtnChangePageActivity;
 import com.liliu.app.mytestapp.activity.DialogActivity;
 import com.liliu.app.mytestapp.activity.IOSDialogActivity;
 import com.liliu.app.mytestapp.activity.LoadMoreActivity;
 import com.liliu.app.mytestapp.activity.MultItemActivity;
 import com.liliu.app.mytestapp.activity.MyViewActivity;
+import com.liliu.app.mytestapp.activity.RvHeadActivity;
 import com.liliu.app.mytestapp.activity.SlideMenuActivity;
+import com.liliu.app.mytestapp.activity.SophixPatchActivity;
 import com.liliu.app.mytestapp.activity.SortActivity;
+import com.liliu.app.mytestapp.activity.TensileAnimActivity;
 import com.liliu.app.mytestapp.activity.TriangleLabelActivity;
 
 import java.util.concurrent.TimeUnit;
@@ -39,6 +43,7 @@ public class MainActivity extends BaseActivity {
         Button mainBtn9 = findViewById(R.id.main_btn_9);
         Button mainBtn10 = findViewById(R.id.main_btn_10);
         Button mainBtn11 = findViewById(R.id.main_btn_11);
+        Button mainBtn12 = findViewById(R.id.main_btn_12);
         RxView.clicks(mainBtn1).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn1());
         RxView.clicks(mainBtn2).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn2());
         RxView.clicks(mainBtn3).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn3());
@@ -48,7 +53,9 @@ public class MainActivity extends BaseActivity {
         RxView.clicks(mainBtn7).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn7());
         RxView.clicks(mainBtn8).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn8());
         RxView.clicks(mainBtn9).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn9());
+        RxView.clicks(mainBtn10).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn10());
         RxView.clicks(mainBtn11).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn11());
+        RxView.clicks(mainBtn12).throttleFirst(1, TimeUnit.SECONDS).subscribe(o -> startBtn12());
     }
 
     protected void initData() {
@@ -87,8 +94,14 @@ public class MainActivity extends BaseActivity {
     private void startBtn9() {
         start(this, LoadMoreActivity.class);
     }
+    private void startBtn10() {
+        start(this, RvHeadActivity.class);
+    }
     private void startBtn11() {
         start(this, MyViewActivity.class);
+    }
+    private void startBtn12() {
+        start(this, SophixPatchActivity.class);
     }
 
 }

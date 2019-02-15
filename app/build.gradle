@@ -21,6 +21,51 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        //打包输出路径
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def file = output.outputFile
+                def fileName
+                if (variant.buildType.name.equals('release')) {
+                    fileName = "app-release-v" + rootProject.ext.android.versionName + ".apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    fileName = "app-debug-v" + rootProject.ext.android.versionName + "_debug.apk"
+                }
+                output.outputFileName = fileName
+                //生成的文件名
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -38,4 +83,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2' //gson
     compile 'com.android.support:cardview-v7:27.1.1'
     compile 'com.jcodecraeer:xrecyclerview:1.5.9'//上拉刷新 加载更多
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.2.8'
+    compile 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }

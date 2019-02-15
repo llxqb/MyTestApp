@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,44 +11,54 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:gravity="center"
-        android:text="贝塞尔曲线"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="贝塞尔曲线" />
 
 
-    <com.liliu.app.mytestapp.views.BoatWaveView
+    <RelativeLayout
+        android:id="@+id/casish_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_below="@id/title"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/casish_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+    <com.liliu.app.mytestapp.views.WaveView
         android:id="@+id/boat_wave_view"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_400"
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginBottom="@dimen/dp_50"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
-
+        android:layout_height="match_parent"
+        android:layout_above="@id/start_move"
+        android:layout_below="@id/casish_layout"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10" />
 
 
     <Button
         android:id="@+id/start_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="@dimen/dp_10"
         android:gravity="center"
-        android:text="开始动画"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/end_move"
-        app:layout_constraintTop_toBottomOf="@id/boat_wave_view" />
+        android:text="开始动画" />
 
     <Button
         android:id="@+id/end_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="@dimen/dp_10"
         android:gravity="center"
-        android:text="结束动画"
-        app:layout_constraintLeft_toRightOf="@id/start_move"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/boat_wave_view" />
+        android:text="结束动画" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

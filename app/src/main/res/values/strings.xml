@@ -12,4 +12,5 @@
     <string name="main_btn9_text">RecyclerView上拉加载更多</string>
     <string name="main_btn10_text">RecyclerView悬浮</string>
     <string name="main_btn11_text">自定义View</string>
+    <string name="main_btn12_text">阿里热修复</string>
 </resources>

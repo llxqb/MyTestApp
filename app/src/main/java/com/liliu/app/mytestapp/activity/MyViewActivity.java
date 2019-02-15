@@ -3,10 +3,11 @@ package com.liliu.app.mytestapp.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.liliu.app.mytestapp.BaseActivity;
 import com.liliu.app.mytestapp.R;
-import com.liliu.app.mytestapp.views.BoatWaveView;
+import com.liliu.app.mytestapp.util.ImageUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,6 +18,8 @@ import butterknife.OnClick;
  */
 public class MyViewActivity extends BaseActivity {
 
+    @BindView(R.id.casish_img)
+    ImageView mCasishImg;
     @BindView(R.id.start_move)
     Button mStartMove;
     @BindView(R.id.end_move)
@@ -32,7 +35,7 @@ public class MyViewActivity extends BaseActivity {
     }
 
     private void initView() {
-
+        ImageUtils.loadIntoUseFitWidth(this, R.mipmap.main_top_icon,R.mipmap.ic_launcher, mCasishImg);
     }
 
     private void initData() {

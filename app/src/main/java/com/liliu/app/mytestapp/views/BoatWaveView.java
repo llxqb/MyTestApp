@@ -93,19 +93,19 @@ public class BoatWaveView extends View {
 
 
         mPathMeasure = new PathMeasure(mPath, false);
-        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                float value = (Float) animation.getAnimatedValue();
-                mPathMeasure.getPosTan(value, mCurrentPosition, null);
-                mPath.lineTo(mCurrentPosition[0], mCurrentPosition[1]);
-                postInvalidate();
-            }
-        });
-        valueAnimator.setDuration(2000);
-        valueAnimator.setRepeatCount(ValueAnimator.INFINITE);//无限循环
-        valueAnimator.start();
+//        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
+//        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator animation) {
+//                float value = (Float) animation.getAnimatedValue();
+//                mPathMeasure.getPosTan(value, mCurrentPosition, null);
+//                mPath.lineTo(mCurrentPosition[0], mCurrentPosition[1]);
+//                postInvalidate();
+//            }
+//        });
+//        valueAnimator.setDuration(2000);
+//        valueAnimator.setRepeatCount(ValueAnimator.INFINITE);//无限循环
+//        valueAnimator.start();
     }
 
 

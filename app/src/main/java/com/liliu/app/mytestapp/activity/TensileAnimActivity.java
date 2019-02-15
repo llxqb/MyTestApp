@@ -1,4 +1,4 @@
-package com.liliu.app.mytestapp;
+package com.liliu.app.mytestapp.activity;
 
 import android.animation.ValueAnimator;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jakewharton.rxbinding2.view.RxView;
+import com.liliu.app.mytestapp.BaseActivity;
+import com.liliu.app.mytestapp.R;
 
 import java.util.concurrent.TimeUnit;
 
