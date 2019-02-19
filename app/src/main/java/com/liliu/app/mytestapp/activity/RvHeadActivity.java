@@ -75,16 +75,16 @@ public class RvHeadActivity extends BaseActivity {
             ExpandGroupItemEntity<String, PatrolItem> groupItem = new ExpandGroupItemEntity<>();
             groupItem.setExpand(false);
             groupItem.setParent("分组 " + group);
-//            List<PatrolItem> childList = new ArrayList<>();
-//            for (int child = 0; child < group + 1; child++) {
-//                PatrolItem childItem = new PatrolItem();
-//                childItem.setTime("2018-04-20 15:00");
-//                childItem.setFactoryName((2000 + child) + " 项目");
-//                childItem.setUser("电工 " + child);
-//                childItem.setState(child % 5);
-//                childList.add(childItem);
-//            }
-//            groupItem.setChildList(childList);
+            List<PatrolItem> childList = new ArrayList<>();
+            for (int child = 0; child < group + 1; child++) {
+                PatrolItem childItem = new PatrolItem();
+                childItem.setTime("2018-04-20 15:00");
+                childItem.setFactoryName((2000 + child) + " 项目");
+                childItem.setUser("电工 " + child);
+                childItem.setState(child % 5);
+                childList.add(childItem);
+            }
+            groupItem.setChildList(childList);
             dataList.add(groupItem);
         }
 
